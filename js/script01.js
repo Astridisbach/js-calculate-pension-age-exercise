@@ -1,24 +1,19 @@
 "use strict";
+
 function calculatePension() {
    const birthdateInput = document.getElementById("birthdate");
    const resultParagraphElem = document.getElementById("result");
   
    resultParagraphElem.textContent = "";
 
-
    const birthdate = new Date(birthdateInput.value);
-
 
    if (isNaN(birthdate)) {
        resultParagraphElem.textContent = "Indtast en gyldig fødselsdato.";
        return;
    }
 
-
-
-
    let retirementAge = "";
-
 
    if (birthdate < new Date("1955-06-30")) {
        retirementAge = 66;
@@ -45,11 +40,9 @@ function calculatePension() {
    }
 
 
-
-
    if (retirementAge <= 66) {
        resultParagraphElem.textContent = `Du har opnået din folkepensionsalder.`;
    } else {
-       resultParagraphElem.textContent = `Du kan gå på pension ${retirementAge} år.`;
+       resultParagraphElem.textContent = `Du kan gå på pension som ${retirementAge} årig.`;
    }
 }
